@@ -14,10 +14,10 @@ const HomePage = () => {
 
   return (
     <>
-      <Bienvenidos setActivePage={setActivePage}/>
+      <Bienvenidos setActivePage={setActivePage} />
       <WelcomeAlert />
       <div className=" text-center">
-        <NavBar /* le paso las props */activePage={activePage} setActivePage={setActivePage} />
+        <NavBar /* le paso las props */ activePage={activePage} setActivePage={setActivePage} />
         <div>{pages[activePage]}</div>
       </div>
     </>

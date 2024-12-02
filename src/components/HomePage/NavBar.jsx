@@ -1,14 +1,14 @@
 import { Button, Container } from "react-bootstrap"
 
 
-const NavBar = ({ activePage,setActivePage }) => {
+const NavBar = ({ activePage, setActivePage }) => {
     const LinkMap = ["Landing Page", "Counter Page"]
     return (
         <Container>
             {
-                LinkMap.map((link) => {
+                LinkMap.map((link, index) => {
                     return (
-                        <Button className="m-3" active={link === activePage} onClick={() => setActivePage(link)}>{link}</Button>
+                        <Button key={index} className="m-3" active={link === activePage} onClick={() => setActivePage(link)}>{link}</Button>
                     );
                 })
             }
